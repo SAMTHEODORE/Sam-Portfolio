@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samthiyodar - Full Stack Developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Jost Font - Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='18' ry='18' width='100' height='100' fill='%23007BFF'/><text x='50' y='65' font-size='60' text-anchor='middle' fill='white' font-family='Arial' font-weight='700'>S</text></svg>">
     <style>
         :root {
@@ -22,7 +26,7 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Jost', sans-serif;
         }
 
         body {
@@ -51,6 +55,7 @@
             font-size: 28px;
             font-weight: 700;
             color: var(--blue);
+            font-family: 'Jost', sans-serif;
         }
 
         nav ul {
@@ -72,6 +77,7 @@
             position: relative;
             padding: 5px 15px;
             transition: color 0.3s;
+            font-family: 'Jost', sans-serif;
         }
 
         nav ul li a::after {
@@ -108,6 +114,7 @@
             text-decoration: none;
             font-weight: 700;
             transition: 0.3s;
+            font-family: 'Jost', sans-serif;
         }
 
         .cv-btn:hover {
@@ -141,6 +148,7 @@
             background: linear-gradient(90deg, var(--blue), var(--pink));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            font-family: 'Jost', sans-serif;
         }
 
         .hero h2 {
@@ -148,6 +156,7 @@
             color: var(--muted);
             margin-bottom: 30px;
             font-weight: 500;
+            font-family: 'Jost', sans-serif;
         }
 
         .hero .desc {
@@ -156,6 +165,7 @@
             margin-bottom: 40px;
             max-width: 500px;
             font-size: 18px;
+            font-family: 'Jost', sans-serif;
         }
 
         /* Hero Buttons */
@@ -172,6 +182,7 @@
             text-decoration: none;
             transition: 0.3s;
             font-size: 16px;
+            font-family: 'Jost', sans-serif;
         }
 
         .hire {
@@ -261,12 +272,14 @@
             margin-bottom: 40px;
             text-align: center;
             font-weight: 700;
+            font-family: 'Jost', sans-serif;
         }
 
         section p, section li {
             color: var(--muted);
             line-height: 1.7;
             font-size: 18px;
+            font-family: 'Jost', sans-serif;
         }
 
         /* About Section */
@@ -307,14 +320,16 @@
             font-size: 36px;
             color: var(--blue);
             margin-bottom: 10px;
+            font-family: 'Jost', sans-serif;
         }
 
         .stat-box p {
             color: var(--muted);
             font-size: 16px;
+            font-family: 'Jost', sans-serif;
         }
 
-        /* Skills Section */
+        /* Skills Grid */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -347,15 +362,21 @@
         .skill-js i { color: #f7df1e; }
         .skill-python i { color: #3776ab; }
         .skill-sql i { color: #4479a1; }
+        .skill-react i { color: #61dafb; }
+        .skill-node i { color: #8cc84b; }
+        .skill-wordpress i { color: #21759b; }
+        .skill-bootstrap i { color: #7952b3; }
 
         .skill h3 {
             color: var(--text);
             margin-bottom: 15px;
             font-size: 22px;
+            font-family: 'Jost', sans-serif;
         }
 
         .skill p {
             color: var(--muted);
+            font-family: 'Jost', sans-serif;
         }
 
         /* Progress Bars */
@@ -382,6 +403,10 @@
         .js-progress { width: 80%; background: #f7df1e; }
         .python-progress { width: 75%; background: #3776ab; }
         .sql-progress { width: 70%; background: #4479a1; }
+        .react-progress { width: 70%; background: #61dafb; }
+        .node-progress { width: 65%; background: #8cc84b; }
+        .wordpress-progress { width: 75%; background: #21759b; }
+        .bootstrap-progress { width: 80%; background: #7952b3; }
 
         .progress-text {
             display: flex;
@@ -389,6 +414,7 @@
             margin-top: 5px;
             font-size: 14px;
             color: var(--muted);
+            font-family: 'Jost', sans-serif;
         }
 
         /* Projects Section */
@@ -429,11 +455,13 @@
             color: var(--text);
             margin-bottom: 15px;
             font-size: 22px;
+            font-family: 'Jost', sans-serif;
         }
 
         .project p {
             color: var(--muted);
             margin-bottom: 20px;
+            font-family: 'Jost', sans-serif;
         }
 
         .project a {
@@ -444,6 +472,7 @@
             align-items: center;
             gap: 8px;
             transition: 0.3s;
+            font-family: 'Jost', sans-serif;
         }
 
         .project a:hover {
@@ -476,22 +505,26 @@
             color: var(--blue);
             margin-bottom: 10px;
             font-size: 20px;
+            font-family: 'Jost', sans-serif;
         }
 
         .education-item .institution {
             color: var(--text);
             font-weight: 600;
             margin-bottom: 5px;
+            font-family: 'Jost', sans-serif;
         }
 
         .education-item .duration {
             color: var(--muted);
             font-size: 14px;
             margin-bottom: 10px;
+            font-family: 'Jost', sans-serif;
         }
 
         .education-item .details {
             color: var(--muted);
+            font-family: 'Jost', sans-serif;
         }
 
         /* Contact Section */
@@ -540,10 +573,12 @@
         .contact-item div h3 {
             color: var(--text);
             margin-bottom: 5px;
+            font-family: 'Jost', sans-serif;
         }
 
         .contact-item div p {
             color: var(--muted);
+            font-family: 'Jost', sans-serif;
         }
 
         .contact-form {
@@ -563,6 +598,7 @@
             margin-bottom: 8px;
             color: var(--text);
             font-weight: 600;
+            font-family: 'Jost', sans-serif;
         }
 
         .form-group input,
@@ -575,6 +611,7 @@
             color: var(--text);
             font-size: 16px;
             transition: 0.3s;
+            font-family: 'Jost', sans-serif;
         }
 
         .form-group input:focus,
@@ -595,6 +632,7 @@
             transition: 0.3s;
             width: 100%;
             font-size: 16px;
+            font-family: 'Jost', sans-serif;
         }
 
         .submit-btn:hover {
@@ -613,6 +651,7 @@
 
         footer p {
             color: var(--muted);
+            font-family: 'Jost', sans-serif;
         }
 
         /* Notification */
@@ -628,10 +667,27 @@
             transform: translateX(150%);
             transition: transform 0.3s ease;
             z-index: 1000;
+            font-family: 'Jost', sans-serif;
         }
 
         .notification.show {
             transform: translateX(0);
+        }
+
+        /* Loading Spinner */
+        .spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+            margin-right: 8px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
         }
 
         /* Responsive Design */
@@ -786,7 +842,7 @@
         <div class="hero-content">
             <h1>Hi, I'm Samthiyodar</h1>
             <h2>Full Stack Developer</h2>
-            <p class="desc">Self-motivated Full Stack Developer with a B.Sc. in Computer Science and strong knowledge of HTML, CSS, JavaScript, Python, and SQL. Passionate about building efficient, user-friendly web applications.</p>
+            <p class="desc">Self-motivated Full Stack Developer with a B.Sc. in Computer Science and strong knowledge of HTML, CSS, JavaScript, Python, SQL, React, Node.js, Bootstrap, and WordPress. Passionate about building efficient, user-friendly web applications.</p>
             
             <div class="btns">
                 <a class="hire" href="#projects">View My Work</a>
@@ -796,7 +852,6 @@
             <div class="socials">
                 <a href="https://www.linkedin.com/in/sam-thiyodar-71647b339/"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/SAMTHEODORE"><i class="fab fa-github"></i></a>
-                <!-- <a href="#"><i class="fab fa-behance"></i></a> -->
                 <a href="https://www.instagram.com/thalaiva_sam/"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
@@ -811,7 +866,7 @@
         <h2>About Me</h2>
         <div class="about-content">
             <div class="about-text">
-                <p>I'm a passionate Full Stack Developer with a B.Sc. in Computer Science from JJ College of Arts and Science. I specialize in creating modern web applications using HTML, CSS, JavaScript for frontend development and Python with SQL for backend solutions.</p>
+                <p>I'm a passionate Full Stack Developer with a B.Sc. in Computer Science from JJ College of Arts and Science. I specialize in creating modern web applications using HTML, CSS, JavaScript, React, Bootstrap for frontend development and Python, Node.js with SQL for backend solutions. I also have experience with WordPress for CMS-based projects.</p>
                 <p>Based in Chennai, I'm committed to continuous learning and adapting to new technologies. I enjoy solving complex problems and building applications that provide excellent user experiences.</p>
                 
                 <div class="about-stats">
@@ -824,7 +879,7 @@
                         <p>Computer Science</p>
                     </div>
                     <div class="stat-box">
-                        <h3>5</h3>
+                        <h3>9+</h3>
                         <p>Technologies</p>
                     </div>
                     <div class="stat-box">
@@ -843,6 +898,7 @@
     <section id="skills">
         <h2>Skills</h2>
         <div class="skills-grid">
+            <!-- HTML -->
             <div class="skill skill-html">
                 <i class="fab fa-html5"></i>
                 <h3>HTML5</h3>
@@ -858,6 +914,7 @@
                 </div>
             </div>
             
+            <!-- CSS -->
             <div class="skill skill-css">
                 <i class="fab fa-css3-alt"></i>
                 <h3>CSS3</h3>
@@ -873,6 +930,7 @@
                 </div>
             </div>
             
+            <!-- JavaScript -->
             <div class="skill skill-js">
                 <i class="fab fa-js-square"></i>
                 <h3>JavaScript</h3>
@@ -888,6 +946,7 @@
                 </div>
             </div>
             
+            <!-- Python -->
             <div class="skill skill-python">
                 <i class="fab fa-python"></i>
                 <h3>Python</h3>
@@ -903,6 +962,7 @@
                 </div>
             </div>
             
+            <!-- SQL -->
             <div class="skill skill-sql">
                 <i class="fas fa-database"></i>
                 <h3>SQL</h3>
@@ -914,6 +974,70 @@
                     <div class="progress-text">
                         <span>Beginner</span>
                         <span>70%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- React -->
+            <div class="skill skill-react">
+                <i class="fab fa-react"></i>
+                <h3>React</h3>
+                <p>Component-based UI development, hooks, state management, and building dynamic single-page applications.</p>
+                <div class="skill-level">
+                    <div class="progress-bar">
+                        <div class="progress react-progress"></div>
+                    </div>
+                    <div class="progress-text">
+                        <span>Intermediate</span>
+                        <span>70%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Node.js -->
+            <div class="skill skill-node">
+                <i class="fab fa-node-js"></i>
+                <h3>Node.js</h3>
+                <p>Server-side JavaScript, RESTful APIs, Express.js, and building scalable backend services.</p>
+                <div class="skill-level">
+                    <div class="progress-bar">
+                        <div class="progress node-progress"></div>
+                    </div>
+                    <div class="progress-text">
+                        <span>Beginner</span>
+                        <span>65%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WordPress -->
+            <div class="skill skill-wordpress">
+                <i class="fab fa-wordpress"></i>
+                <h3>WordPress</h3>
+                <p>Theme customization, plugin integration, CMS management, and building websites with WordPress.</p>
+                <div class="skill-level">
+                    <div class="progress-bar">
+                        <div class="progress wordpress-progress"></div>
+                    </div>
+                    <div class="progress-text">
+                        <span>Intermediate</span>
+                        <span>75%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bootstrap -->
+            <div class="skill skill-bootstrap">
+                <i class="fab fa-bootstrap"></i>
+                <h3>Bootstrap</h3>
+                <p>Responsive grid system, pre-built components, utility classes, and rapid front-end development.</p>
+                <div class="skill-level">
+                    <div class="progress-bar">
+                        <div class="progress bootstrap-progress"></div>
+                    </div>
+                    <div class="progress-text">
+                        <span>Intermediate</span>
+                        <span>80%</span>
                     </div>
                 </div>
             </div>
@@ -998,20 +1122,20 @@
                 </div>
             </div>
             <div class="contact-form">
-                <form id="contactForm">
+                <form id="contactForm" action="https://formspree.io/f/mnnqbjvp" method="POST">
                     <div class="form-group">
                         <label for="name">Your Name</label>
-                        <input type="text" id="name" required>
+                        <input type="text" id="name" name="name" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Your Email</label>
-                        <input type="email" id="email" required>
+                        <input type="email" id="email" name="email" required>
                     </div>
                     <div class="form-group">
                         <label for="message">Your Message</label>
-                        <textarea id="message" rows="5" required></textarea>
+                        <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
+                    <button type="submit" class="submit-btn" id="submitBtn">Send Message</button>
                 </form>
             </div>
         </div>
@@ -1019,7 +1143,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Samthiyodar. All Rights Reserved.</p>
+        <p>&copy; 2026 Samthiyodar. All Rights Reserved.</p>
     </footer>
 
     <!-- Notification -->
@@ -1039,38 +1163,59 @@
             });
         });
 
-        // Contact form submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
+        // Contact form submission with Formspree
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
             e.preventDefault();
             
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
+            const form = this;
+            const submitBtn = document.getElementById('submitBtn');
+            const originalText = submitBtn.textContent;
             
-            // Create WhatsApp message
-            const whatsappMessage = `New message from portfolio website:%0A%0AName: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+            // Show loading state
+            submitBtn.innerHTML = '<span class="spinner"></span> Sending...';
+            submitBtn.disabled = true;
             
-            // Create email body
-            const emailSubject = `New message from ${name}`;
-            const emailBody = `Name: ${name}%0D%0AEmail: ${email}%0D%0AMessage: ${message}`;
-            
-            // Open WhatsApp with pre-filled message
-            window.open(`https://wa.me/916382704336?text=${whatsappMessage}`, '_blank');
-            
-            // Open email client with pre-filled message
-            window.open(`mailto:samthiyodara@gmail.com?subject=${emailSubject}&body=${emailBody}`);
-            
-            // Show notification
-            const notification = document.getElementById('notification');
-            notification.classList.add('show');
-            
-            // Reset form
-            document.getElementById('contactForm').reset();
-            
-            // Hide notification after 3 seconds
-            setTimeout(() => {
-                notification.classList.remove('show');
-            }, 3000);
+            try {
+                const formData = new FormData(form);
+                
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    // Show success notification
+                    const notification = document.getElementById('notification');
+                    notification.textContent = 'Message sent successfully!';
+                    notification.classList.add('show');
+                    
+                    // Reset form
+                    form.reset();
+                    
+                    // Hide notification after 3 seconds
+                    setTimeout(() => {
+                        notification.classList.remove('show');
+                    }, 3000);
+                } else {
+                    throw new Error('Failed to send message');
+                }
+            } catch (error) {
+                // Show error notification
+                const notification = document.getElementById('notification');
+                notification.textContent = 'Failed to send message. Please try again.';
+                notification.classList.add('show');
+                
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                }, 3000);
+            } finally {
+                // Reset button
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }
         });
 
         // Animate progress bars when skills section comes into view
@@ -1090,7 +1235,7 @@
 
         observer.observe(document.getElementById('skills'));
     </script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
