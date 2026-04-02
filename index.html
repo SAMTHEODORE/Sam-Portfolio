@@ -1536,7 +1536,7 @@
                 
                 // Create mailto link as fallback
                 const subject = `Project Requirement from ${clientName} - ${projectType}`;
-                const body = `Name: ${clientName}%0AEmail: ${clientEmail}%0APhone: ${clientPhone || 'Not provided'}%0AProject Type: ${projectType}%0ABudget: ${budget}%0ATimeline: ${timeline}%0A%0AProject Description:%0A${projectDescription}%0A%0AKey Features:%0A${features || 'Not specified'}%0A%0A---%0ASubmitted from Portfolio Website`;
+                const body = `Name: ${clientName} \n Email: ${clientEmail} \n Phone: ${clientPhone || 'Not provided'} \n Project Type: ${projectType} \n Budget: ${budget} \n Timeline: ${timeline} \n Project Description:${projectDescription} \n Features:${features || 'Not specified'} \n Submitted from Portfolio Website`;
                 
                 if (confirm('Would you like to open your email client to send directly?')) {
                     window.location.href = `mailto:samthiyodara@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
