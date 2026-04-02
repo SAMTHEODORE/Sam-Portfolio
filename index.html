@@ -1535,8 +1535,67 @@
                 notification.className = 'notification error show';
                 
                 // Create mailto link as fallback
-                const subject = `Project Requirement from ${clientName} - ${projectType}`;
-                const body = `Name: ${clientName} \n Email: ${clientEmail} \n Phone: ${clientPhone || 'Not provided'} \n Project Type: ${projectType} \n Budget: ${budget} \n Timeline: ${timeline} \n Project Description:${projectDescription} \n Features:${features || 'Not specified'} \n Submitted from Portfolio Website`;
+                // const subject = `Project Requirement from ${clientName} - ${projectType}`;
+                // const body = `Name: ${clientName} \n Email: ${clientEmail} \n Phone: ${clientPhone || 'Not provided'} \n Project Type: ${projectType} \n Budget: ${budget} \n Timeline: ${timeline} \n Project Description:${projectDescription} \n Features:${features || 'Not specified'} \n Submitted from Portfolio Website`;
+                
+                const subject = `Project Inquiry: ${projectType} from ${clientName}`;
+
+const body = `
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📋 NEW PROJECT REQUIREMENTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+👤 CLIENT INFORMATION
+────────────────────────────────────
+Name:        ${clientName}
+Email:       ${clientEmail}
+Phone:       ${clientPhone || 'Not provided'}
+Date:        ${new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📌 PROJECT DETAILS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Project Type:    ${projectType}
+Budget Range:    ${budget}
+Timeline:        ${timeline}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📝 PROJECT DESCRIPTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+${projectDescription}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⚙️ KEY FEATURES REQUIRED
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+${features || '• To be discussed during consultation'}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📎 ADDITIONAL NOTES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+• Priority: Medium
+• Source: Portfolio Website Contact Form
+• Reference ID: REQ-${Date.now().toString().slice(-8)}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✨ Next Steps: I will review your requirements 
+   and get back to you within 24 hours with a 
+   detailed proposal, timeline, and cost breakdown.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Best Regards,
+Samthiyodar
+Full Stack Developer
+📧 samthiyodara@gmail.com
+📱 +91 63827 04336
+🌐 Portfolio: samthiyodar.dev
+`;
+
+
+
                 
                 if (confirm('Would you like to open your email client to send directly?')) {
                     window.location.href = `mailto:samthiyodara@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
