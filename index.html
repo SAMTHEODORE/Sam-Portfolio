@@ -396,6 +396,7 @@
         .skill-node i { color: #8cc84b; }
         .skill-wordpress i { color: #21759b; }
         .skill-bootstrap i { color: #7952b3; }
+        .skill-django i { color: #092E20; }  /* Django dark green */
 
         .skill h3 {
             color: var(--text);
@@ -437,6 +438,7 @@
         .node-progress { width: 65%; background: #8cc84b; }
         .wordpress-progress { width: 75%; background: #21759b; }
         .bootstrap-progress { width: 80%; background: #7952b3; }
+        .django-progress { width: 65%; background: #092E20; } /* Django progress */
 
         .progress-text {
             display: flex;
@@ -1020,7 +1022,7 @@
         <div class="hero-content">
             <h1>Hi, I'm Samthiyodar</h1>
             <h2>Full Stack Developer</h2>
-            <p class="desc">Self-motivated Full Stack Developer with a B.Sc. in Computer Science and strong knowledge of HTML, CSS, JavaScript, Python, SQL, React, Node.js, Bootstrap, and WordPress. Passionate about building efficient, user-friendly web applications for clients worldwide.</p>
+            <p class="desc">Self-motivated Full Stack Developer with a B.Sc. in Computer Science and strong knowledge of HTML, CSS, JavaScript, Python, SQL, React, Node.js, Bootstrap, WordPress, and Django. Passionate about building efficient, user-friendly web applications for clients worldwide.</p>
             
             <div class="btns">
                 <a class="hire" href="#projects">View My Work</a>
@@ -1045,7 +1047,7 @@
         <h2>About Me</h2>
         <div class="about-content">
             <div class="about-text">
-                <p>I'm a passionate Full Stack Developer with a B.Sc. in Computer Science from JJ College of Arts and Science. I specialize in creating modern web applications using HTML, CSS, JavaScript, React, Bootstrap for frontend development and Python, Node.js with SQL for backend solutions. I also have experience with WordPress for CMS-based projects.</p>
+                <p>I'm a passionate Full Stack Developer with a B.Sc. in Computer Science from JJ College of Arts and Science. I specialize in creating modern web applications using HTML, CSS, JavaScript, React, Bootstrap for frontend development and Python, Django, Node.js with SQL for backend solutions. I also have experience with WordPress for CMS-based projects.</p>
                 <p>Based in Chennai, I'm committed to continuous learning and adapting to new technologies. I enjoy solving complex problems and building applications that provide excellent user experiences for my clients.</p>
                 
                 <div class="about-stats">
@@ -1062,7 +1064,7 @@
                         <p>Computer Science</p>
                     </div>
                     <div class="stat-box">
-                        <h3>9+</h3>
+                        <h3>10+</h3>
                         <p>Technologies</p>
                     </div>
                 </div>
@@ -1217,6 +1219,22 @@
                     <div class="progress-text">
                         <span>Intermediate</span>
                         <span>80%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Django (NEW) -->
+            <div class="skill skill-django">
+                <i class="fab fa-python"></i> <!-- Using Python icon as Django doesn't have a dedicated FontAwesome icon -->
+                <h3>Django</h3>
+                <p>High-level Python web framework for rapid development, clean design, and robust backend solutions.</p>
+                <div class="skill-level">
+                    <div class="progress-bar">
+                        <div class="progress django-progress"></div>
+                    </div>
+                    <div class="progress-text">
+                        <span>Beginner</span>
+                        <span>65%</span>
                     </div>
                 </div>
             </div>
@@ -1535,12 +1553,8 @@
                 notification.className = 'notification error show';
                 
                 // Create mailto link as fallback
-                // const subject = `Project Requirement from ${clientName} - ${projectType}`;
-                // const body = `Name: ${clientName} \n Email: ${clientEmail} \n Phone: ${clientPhone || 'Not provided'} \n Project Type: ${projectType} \n Budget: ${budget} \n Timeline: ${timeline} \n Project Description:${projectDescription} \n Features:${features || 'Not specified'} \n Submitted from Portfolio Website`;
-                
                 const subject = `Project Inquiry: ${projectType} from ${clientName}`;
-
-const body = `
+                const body = `
 ━━━━━━━━
 📋 NEW PROJECT REQUIREMENTS
 ━━━━━━━━
@@ -1594,9 +1608,6 @@ Full Stack Developer
 📱 +91 63827 04336
 🌐 Portfolio: samthiyodar.dev
 `;
-
-
-
                 
                 if (confirm('Would you like to open your email client to send directly?')) {
                     window.location.href = `mailto:samthiyodara@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
